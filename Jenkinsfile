@@ -1,5 +1,3 @@
-1. Directive Pipeline
-
 pipeline {
 agent any
 stages {
