@@ -1,21 +1,31 @@
 pipeline {
-agent any
-stages {
-  stage('build') {
-      // One or more stages need to be included within the stages block.
-    }
-  }
-
-  stage('deploy') {
-    stages {
-      // One or more stages need to be included within the stages block.
-    }
-  }
-
-  stage('test') {
-    stages {
-      // One or more stages need to be included within the stages block.
-    }
-  }
-
+	agent any 
+	stages {
+		stage ('build') {
+			steps {
+				sh '''
+						echo "this is build stage"
+						sleep 2
+				   '''	
+			} 
+		}
+		
+		stage ('deploy') {
+			steps {
+				sh '''
+						echo "this is deploy stage"
+						sleep 2
+				   '''	
+			}	   
+		}
+		
+		stage ('test') {
+			steps {
+				sh '''
+						echo "this is test stage"
+						sleep 2
+				   '''	
+			}	   
+		}
+	}
 }
